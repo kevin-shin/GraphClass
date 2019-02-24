@@ -2,25 +2,18 @@ package graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.awt.*;
 
-public class Vertex {
+public class Vertex{
 
-    private String label;
+    private Color color;
     private double x;
     private double y;
 
-    public Vertex(String label, double x, double y) {
-        this.label = label;
+    public Vertex(Color color, double x, double y) {
+        this.color = color;
         this.x = x;
         this.y = y;
-    }
-
-    public static double distance(Vertex v1, Vertex v2) {
-        return Math.sqrt((Math.pow(v1.getY() - v2.getY(), 2)) + (Math.pow(v1.getX() - v2.getX(), 2)));
-    }
-
-    public String getLabel() {
-        return label;
     }
 
     public double getX() {
@@ -31,18 +24,9 @@ public class Vertex {
         return y;
     }
 
-    @Override
-    public String toString() {
-        return "{" + label + ", x=" + x + ", y=" + y + '}';
-    }
-
-
-    public boolean equals(Object obj) {
-        if (obj instanceof Vertex) {
-            Vertex vobj = (Vertex) obj;
-            return label.equals(vobj.label) && (this.x == vobj.x) && (this.y == vobj.y);
-        }
-        return false;
+    public void updatePosition(double x,double y){
+        this.x = x;
+        this.y = y;
     }
 
 
