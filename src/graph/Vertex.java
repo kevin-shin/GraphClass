@@ -6,25 +6,28 @@ import java.awt.*;
 
 public class Vertex{
 
-    private Color color;
-    private double x;
-    private double y;
+    private int x;
+    private int y;
+    private double radius;
 
-    public Vertex(Color color, double x, double y) {
-        this.color = color;
+    public Vertex(int x, int y, double radius) {
         this.x = x;
         this.y = y;
+        this.radius = radius;
     }
 
-    public double getX() {
+    public int getX() {
         return x;
     }
 
-    public double getY() {
+    public int getY() {
         return y;
     }
 
-    public void updatePosition(double x,double y){
+    public double getRadius(){
+        return radius;
+    }
+    public void updatePosition(int x,int y){
         this.x = x;
         this.y = y;
     }
