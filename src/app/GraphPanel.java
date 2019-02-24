@@ -63,6 +63,7 @@ public class GraphPanel extends JPanel {
             g2.fill(node);
         }
 
+
         for (Edge edge : edges) {
             g.drawLine(edge.getVertex1().getX(), edge.getVertex1().getY(), edge.getVertex2().getX(), edge.getVertex2().getY());
         }
@@ -103,11 +104,9 @@ public class GraphPanel extends JPanel {
                             edges.add(new Edge(other, v));
                         }
                     }
-
-                    repaint();
                 }
             }
-
+        repaint();
         }
 
         @Override
